@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-body {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.telegram{
+    color: #27a7e7;
+}
+
+.telegram-button{
+    background: #27a7e7;
+}
+
+.whatsapp{
+    color: #2cb742;
+}
+
+.whatsapp-button{
+    background: #2cb742;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.container__title {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.container__section-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.container__wrapper {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    cursor: text;
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.container__wrapper:hover {
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+.container__plus-icon {
+    font-size: 24px;
+    margin-right: 12px;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+input[type=tel] {
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    width: 100%;
+    background: transparent;
+    padding: 8px 10px;
+    color: #222;
+    letter-spacing: 1.5px;
+}
+
+/* Убираем стрелки у input number для Firefox и Chrome */
+input[type=tel]::-webkit-inner-spin-button,
+input[type=tel]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=tel] {
+    -moz-appearance: textfield;
+}
+
+button {
+    margin-left: 15px;
+    padding: 10px 25px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1.1rem;
+    color: #fff;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+    user-select: none;
+    min-width: 80px;
+    flex-shrink: 0;
+}
+
+.telegram-button {
+    background-color: #27a7e7;
+}
+.telegram-button:hover {
+    filter: brightness(0.9);
+}
+
+.whatsapp-button {
+    background-color: #2cb742;
+}
+.whatsapp-button:hover {
+    filter: brightness(0.9);
+}
+
+.footer {
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+    padding: 10px 0;
+    user-select: none;
+}
+
+/* Адаптив */
+@media (max-width: 480px) {
+    .container {
+        max-width: 90vw;
+    }
+    .container__title {
+        font-size: 1.5rem;
+    }
+    button {
+        padding: 10px 15px;
+        font-size: 1rem;
+        margin-left: 10px;
+        min-width: 60px;
+    }
+}
